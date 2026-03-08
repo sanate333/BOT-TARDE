@@ -38,7 +38,16 @@
         "secret": "",
         "ccxt_config": {
             "enableRateLimit": true,
-            "hostname": "bytick.com"
+            "hostname": "bytick.com",
+            "urls": {
+                "api": {
+                    "spot": "https://api.bytick.com",
+                    "futures": "https://api.bytick.com",
+                    "v2": "https://api.bytick.com",
+                    "public": "https://api.bytick.com",
+                    "private": "https://api.bytick.com"
+                }
+            }
         },
         "ccxt_sync_config": {
             "timeout": 60000
@@ -46,6 +55,15 @@
         "ccxt_async_config": {
             "enableRateLimit": true,
             "hostname": "bytick.com",
+            "urls": {
+                "api": {
+                    "spot": "https://api.bytick.com",
+                    "futures": "https://api.bytick.com",
+                    "v2": "https://api.bytick.com",
+                    "public": "https://api.bytick.com",
+                    "private": "https://api.bytick.com"
+                }
+            },
             "timeout": 60000
         },
         "pair_whitelist": [
