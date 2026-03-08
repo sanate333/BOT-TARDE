@@ -11,6 +11,27 @@
         "name": "binance",
         "key": "",
         "secret": "",
+        "ccxt_config": {
+            "urls": {
+                "api": {
+                    "fapiPublic": "https://fapi.binance.com/fapi/v1",
+                    "fapiPrivate": "https://fapi.binance.com/fapi/v1",
+                    "fapiPrivateV2": "https://fapi.binance.com/fapi/v2",
+                    "public": "https://api1.binance.com/api/v3",
+                    "private": "https://api1.binance.com/api/v3"
+                }
+            },
+            "enableRateLimit": true,
+            "timeout": 60000
+        },
+        "ccxt_sync_config": {
+            "enableRateLimit": true,
+            "timeout": 60000
+        },
+        "ccxt_async_config": {
+            "enableRateLimit": true,
+            "timeout": 60000
+        },
         "pair_whitelist": [
             "BTC/USDT:USDT",
             "ETH/USDT:USDT",
