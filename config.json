@@ -4,12 +4,12 @@
     "margin_mode": "isolated",
     "max_open_trades": 3,
     "stake_currency": "USDT",
-    "stake_amount": 30,
+    "stake_amount": 15,
     "tradable_balance_ratio": 0.99,
     "fiat_display_currency": "USD",
     "timeframe": "5m",
     "dry_run": true,
-    "dry_run_wallet": 100,
+    "dry_run_wallet": 50,
     "cancel_open_orders_on_exit": false,
     "unfilledtimeout": {
         "entry": 10,
@@ -34,3 +34,60 @@
     },
     "exchange": {
         "name": "bybit",
+        "key": "",
+        "secret": "",
+        "ccxt_config": {
+            "enableRateLimit": true,
+            "options": {
+                "defaultType": "swap"
+            }
+        },
+        "ccxt_async_config": {
+            "enableRateLimit": true,
+            "timeout": 60000
+        },
+        "pair_whitelist": [
+            "BTC/USDT:USDT",
+            "ETH/USDT:USDT",
+            "SOL/USDT:USDT",
+            "XRP/USDT:USDT",
+            "DOGE/USDT:USDT",
+            "ADA/USDT:USDT",
+            "AVAX/USDT:USDT",
+            "LINK/USDT:USDT",
+            "DOT/USDT:USDT",
+            "MATIC/USDT:USDT"
+        ],
+        "pair_blacklist": []
+    },
+    "pairlists": [
+        {
+            "method": "StaticPairList"
+        }
+    ],
+    "telegram": {
+        "enabled": false,
+        "token": "",
+        "chat_id": ""
+    },
+    "api_server": {
+        "enabled": true,
+        "listen_ip_address": "0.0.0.0",
+        "listen_port": 8080,
+        "verbosity": "error",
+        "enable_openapi": false,
+        "jwt_secret_key": "somethingRandomSomethingRandom123",
+        "CORS_origins": ["http://127.0.0.1:8080", "http://localhost:8080"],
+        "username": "oasis",
+        "password": "oasis1"
+    },
+    "bot_name": "SanateBot",
+    "initial_state": "running",
+    "force_entry_enable": true,
+    "internals": {
+        "process_throttle_secs": 5
+    },
+    "strategy": "SanateStrategy",
+    "strategy_path": "user_data/strategies/",
+    "db_url": "sqlite:///user_data/tradesv3.sqlite"
+}
