@@ -38,10 +38,10 @@
         "secret": "",
         "ccxt_config": {
             "enableRateLimit": true,
-            "hostname": "bytick.com",
-            "options": {
-                "defaultType": "swap"
-            }
+            "hostname": "bytick.com"
+        },
+        "ccxt_sync_config": {
+            "timeout": 60000
         },
         "ccxt_async_config": {
             "enableRateLimit": true,
