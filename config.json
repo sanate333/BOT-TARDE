@@ -38,16 +38,24 @@
         "secret": "",
         "ccxt_config": {
             "enableRateLimit": true,
-            "hostname": "bytick.com",
-            "timeout": 60000
+            "timeout": 60000,
+            "options": {
+                "fetchMarkets": ["linear"],
+                "defaultType": "swap",
+                "defaultSettle": "USDT"
+            }
         },
         "ccxt_sync_config": {
             "timeout": 60000
         },
         "ccxt_async_config": {
             "enableRateLimit": true,
-            "hostname": "bytick.com",
-            "timeout": 60000
+            "timeout": 60000,
+            "options": {
+                "fetchMarkets": ["linear"],
+                "defaultType": "swap",
+                "defaultSettle": "USDT"
+            }
         },
         "pair_whitelist": [
             "BTC/USDT:USDT",

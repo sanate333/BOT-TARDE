@@ -418,15 +418,6 @@ class Exchange:
         except ccxt.BaseError as e:
             raise OperationalException(f"Initialization of ccxt failed. Reason: {e}") from e
 
-        # Force bytick.com for bybit to bypass regional blocks (e.g. Colombia)
-        if name.lower() == "bybit":
-            api.hostname = "bytick.com"
-            bytick_url = "https://api.bytick.com"
-            if isinstance(api.urls.get("api"), dict):
-                for key in api.urls["api"]:
-                    api.urls["api"][key] = bytick_url
-            logger.info("Bybit hostname forced to bytick.com")
-
         return api
 
     @property
