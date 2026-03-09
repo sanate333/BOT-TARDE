@@ -33,16 +33,15 @@
         "order_book_top": 1
     },
     "exchange": {
-        "name": "bybit",
-        "key": "",
-        "secret": "",
+        "name": "binance",
+        "key": "6HSGhzLTw5io62OYaJpjDBCRud0HGJP2lnG6l6HdaaHjQ4rhOVBrZwFSoesmSoGW",
+        "secret": "k38L0gWaxbOssVu2JYKS46W1gS9ETBNsSnodhLQPMgeC6fWg3IIzbsi9Nuz3jRvu",
         "ccxt_config": {
             "enableRateLimit": true,
             "timeout": 60000,
             "options": {
-                "fetchMarkets": ["linear"],
-                "defaultType": "swap",
-                "defaultSettle": "USDT"
+                "defaultType": "future",
+                "adjustForTimeDifference": true
             }
         },
         "ccxt_sync_config": {
@@ -52,9 +51,8 @@
             "enableRateLimit": true,
             "timeout": 60000,
             "options": {
-                "fetchMarkets": ["linear"],
-                "defaultType": "swap",
-                "defaultSettle": "USDT"
+                "defaultType": "future",
+                "adjustForTimeDifference": true
             }
         },
         "pair_whitelist": [
@@ -69,7 +67,9 @@
             "DOT/USDT:USDT",
             "MATIC/USDT:USDT"
         ],
-        "pair_blacklist": []
+        "pair_blacklist": [
+            "BNB/.*"
+        ]
     },
     "pairlists": [
         {
