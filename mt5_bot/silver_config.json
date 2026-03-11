@@ -1,0 +1,31 @@
+{
+    "_comment": "Silver RSI Bot - Configuración para trading automático de Silver (XAGUSD)",
+    "_strategy": "COMPRA: RSI(14) < 30 + Precio > EMA(50) | VENTA: RSI(14) > 70",
+
+    "symbol": "XAGUSD",
+    "symbol_alternatives": ["XAGUSD", "XAGUSD.", "SILVER", "Silver", "XAGUSD.pro", "XAGUSDm"],
+    "timeframe": "5m",
+
+    "rsi_period": 14,
+    "rsi_buy_level": 30,
+    "rsi_sell_level": 70,
+    "ema_period": 50,
+
+    "lot_size": 0.01,
+    "stop_loss_pips": 50,
+    "take_profit_pips": 100,
+    "max_trades": 1,
+
+    "trailing_stop": true,
+    "trailing_pips": 30,
+    "trailing_start_pips": 50,
+
+    "dry_run": true,
+    "check_interval_seconds": 30,
+    "magic_number": 234100,
+
+    "mt5_path": null,
+    "account": null,
+    "password": null,
+    "server": null
+}

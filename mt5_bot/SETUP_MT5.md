@@ -74,6 +74,45 @@ Los pares del config son los principales con mejor liquidez:
 - EURUSD, GBPUSD, USDJPY, USDCHF
 - AUDUSD, USDCAD, NZDUSD, EURGBP
 
+---
+
+## Silver RSI Bot (XAGUSD) - NUEVO
+
+Bot especializado para operar **Silver (Plata/XAGUSD)** con estrategia simple de RSI + EMA50.
+
+### Estrategia
+- **COMPRA**: RSI(14) < 30 + Precio > EMA(50)
+- **VENTA**: RSI(14) > 70
+- **Stop Loss**: 50 pips | **Take Profit**: 100 pips
+- **Trailing Stop**: 30 pips (se activa a 50 pips de ganancia)
+
+### Opción A: Bot Python para Silver
+
+```powershell
+cd BOT-TARDE\mt5_bot
+# Editar silver_config.json con tus datos de cuenta
+python silver_mt5_bot.py --config silver_config.json
+```
+
+### Opción B: EA MQL5 para Silver
+
+1. Copiar `MQL5_EA/SilverRSI_EA.mq5` a la carpeta de Experts de MT5
+2. Abrir MetaEditor (F4), abrir el archivo y compilar (F7)
+3. Abrir gráfico de **XAGUSD**
+4. Arrastrar `SilverRSI_EA` al gráfico
+5. Activar **Algo Trading** (botón verde en barra de herramientas)
+6. Ajustar parámetros: lote, niveles RSI, SL/TP
+
+### Backtesting del Silver Bot
+
+1. Presionar **Ctrl+R** para abrir el Strategy Tester
+2. Seleccionar `SilverRSI_EA` como Expert
+3. Seleccionar `XAGUSD` como símbolo
+4. Rango de datos: mínimo 6 meses
+5. Activar **Visual mode** para ver los trades en el gráfico
+
+---
+
 ## Notas Importantes
 
 - **Empieza SIEMPRE en cuenta demo** antes de operar con dinero real
