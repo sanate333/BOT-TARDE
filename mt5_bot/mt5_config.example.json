@@ -1,0 +1,32 @@
+{
+    "mt5_path": "C:\\Program Files\\MetaTrader 5\\terminal64.exe",
+    "account": 104125263,
+    "password": "",
+    "server": "MetaQuotes-Demo",
+
+    "symbols": [
+        "EURUSD", "GBPUSD", "USDJPY", "USDCHF",
+        "AUDUSD", "USDCAD", "NZDUSD", "EURGBP"
+    ],
+
+    "timeframe": "5m",
+    "check_interval_seconds": 30,
+
+    "dry_run": true,
+
+    "lot_size": 0.01,
+    "max_open_trades": 3,
+    "stoploss_pct": 0.04,
+    "take_profit_pct": 0.08,
+    "leverage": 3,
+
+    "trailing_stop": true,
+    "trailing_stop_positive": 0.01,
+    "trailing_stop_positive_offset": 0.025,
+
+    "rsi_buy_threshold": 30,
+    "rsi_sell_threshold": 70,
+    "bb_buy_trigger": 0.99,
+    "bb_sell_trigger": 1.01,
+    "adx_min": 20
+}
